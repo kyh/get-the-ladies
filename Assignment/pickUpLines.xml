@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jokes>
+	<joke>
+		<title>Are you an interior decorator? 'Cause when I saw you, the room became beautiful.</title>
+		<rating>7</rating>
+	</joke>
+	<joke>
+		<title>I'm not drunk, I'm just intoxicated by you.</title>
+		<rating>4</rating>
+	</joke>
+	<joke>
+		<title>If beauty were time, you'd be eternity.</title>
+		<rating>6</rating>
+	</joke>
+	<joke>
+		<title>You look cold. Want to use me as a blanket?</title>
+		<rating>7</rating>
+	</joke>
+	<joke>
+		<title>You're so beautiful that you made me forget my pickup line.</title>
+		<rating>7</rating>
+	</joke>
+	<joke>
+		<title>If I had a star for every time you brightened my day, I'd have a galaxy in my hand.</title>
+		<rating>7</rating>
+	</joke>
+</jokes>

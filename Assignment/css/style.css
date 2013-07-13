@@ -1,0 +1,9 @@
+body {
+	font-family: sans-serif;
+}
+
+#main {
+	padding: 1em;
+	margin: 1em;
+	text-align: center;
+}
