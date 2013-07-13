@@ -27,7 +27,7 @@ if ( $_GET['category'] && $_GET['category'] != '' ) {
 	<section id="main">
 		<?php
 			if($flag) {
-				echo ('A Radio Button is clicked!');
+				// echo ('A Radio Button is clicked!');
 				$categorized = array();
 
 				for ($x=0; $x<=count($pickUp); $x++)
