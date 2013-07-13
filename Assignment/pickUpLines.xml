@@ -2,41 +2,41 @@
 		<joke>
 			<title>Is your name Google? Because you have everything I've been searching for.</title>
 			<rating>4</rating>
-			<category> cheesy </category>
+			<category>cheesy</category>
 		</joke>
 		<joke>
 			<title>Were you arrested earlier? It's gotta be illegal to look that good.</title>
 			<rating>4</rating>
-			<category> cheesy </category>
+			<category>cheesy</category>
 		</joke>	
 		<joke>
 			<title>"Do you believe in love at first sight, or do I have to walk by again?"</title>
 			<rating>6</rating>
-			<category> cheesy </category>
+			<category>cheesy</category>
 		</joke>
 		
 		<joke>
 			<title>Let me tie your shoes, because I don't want you falling for anyone else.</title>
 			<rating>6</rating>
-			<category> nerdy </category>
+			<category>nerdy</category>
 
 		</joke>
 		<joke>
 			<title>Excuse me, but I think I dropped something!!! MY JAW!!</title>
 			<rating>5</rating>
-			<category> nerdy </category>
+			<category>nerdy</category>
 
 		</joke>
 		<joke>
 			<title>Let's make like fabric softner and snuggle</title>
 			<rating>6</rating>
-			<category> nerdy </category>
+			<category>nerdy</category>
 
 		</joke>
 		<joke>
 			<title>“Would you grab my arm so I can tell my friends I’ve been touched by an angel!”</title>
 			<rating>5</rating>
-			<category> nerdy </category>
+			<category>nerdy</category>
 
 		</joke>
 </jokes>
