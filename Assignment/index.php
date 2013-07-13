@@ -12,9 +12,14 @@
 </head>
 <body>
 	<section id="main">
+		<p>hi</p>
 		<?php
 			echo('<p>' . $pickUp->joke[$rand]->title . '</p>');
 		?>
+
+	<form action="index.php">
+		<input type="submit" value="New Line">	
+	</form>
 	</section>
 </body>
 </html>
