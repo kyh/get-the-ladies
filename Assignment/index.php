@@ -2,13 +2,13 @@
 	$pickUp = simplexml_load_file('pickUpLines.xml');
 	$rand = rand(0, 5); //random number from 0-5
 
-if ( $_GET['category'] && $_GET['category'] != '' ) {
-	$category = $_GET['category'];
+	if ( $_GET['category'] && $_GET['category'] != '' ) {
+		$category = $_GET['category'];
 	
-	echo("$category");
+		echo("$category");
 
-	if ($category=="all") {
-		$flag=false;
+		if ($category=="all") {
+			$flag=false;
 	}
 	else {
 		$flag = true;
@@ -55,13 +55,16 @@ if ( $_GET['category'] && $_GET['category'] != '' ) {
 
 
 	<form>
-
-
 		<input type="radio" name="category" value="all" <?php if ($category=="all") echo 'checked="checked"'?> /> All<br>
 		<input type="radio" name="category" value="nerdy" <?php if ($category=="nerdy") echo 'checked="checked"'?> /> Nerdy Pickup Lines<br>
 		<input type="radio" name="category" value="cheesy" <?php if ($category=="cheesy") echo 'checked="checked"'?> />Cheesy Pickup Lines
 		<input type="submit" value="submit">
 	</form>
+
+	<form>
+		<input type="submit" value="I Like this!">
+	</form>
+
 	</section>
 </body>
 </html>
