@@ -9,11 +9,26 @@
 
 		if ($category=="all") {
 			$flag=false;
+		}
+		else {
+			$flag = true;
+		}
 	}
-	else {
-		$flag = true;
+
+	if ($_GET['likebox'] && $_GET['likebox'] == 'ilike') {
+		$likedline = $_GET['pickupline'];
+		savetofile($likedline);
+
+		echo("SAVED");
+
 	}
-}
+
+	function savetofile ($pline) {
+		$file="saved.txt";
+		file_put_contents($file, $pline, FILE_APPEND | LOCL_EX);
+		
+	}
+
 ?>
 
 <!doctype html>
@@ -24,6 +39,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<form>
 	<section id="main">
 		<?php
 			if($flag) {
@@ -36,34 +52,39 @@
 					{
 						$line = $pickUp->joke[$x]->title;
 						array_push($categorized, $line);
-					}
 
+					}
 				}
 
 				$rand1 = rand(0, count($categorized)-1);
-				echo ($categorized[$rand1]);
+				
+				echo ('<input type="text" name="pickupline" size="150" value="' . $categorized[$rand1] . '">');
 				
 			}else {	
 
-				echo('<p>' . $pickUp->joke[$rand]->title . '</p>');
+
+				echo('<input type="text" name="pickupline" size="150" value="' . $pickUp->joke[$rand]->title . '">');
+
 			}
 		?>
 
-	<form action="index.php">
-		<input type="submit" value="New Line">	
-	</form>
-
-
-	<form>
-		<input type="radio" name="category" value="all" <?php if ($category=="all") echo 'checked="checked"'?> /> All<br>
+	
+		<input type="radio" name="category" value="all" <?php if ($category=="all") echo 'checked="checked"'?>  /> All<br>
 		<input type="radio" name="category" value="nerdy" <?php if ($category=="nerdy") echo 'checked="checked"'?> /> Nerdy Pickup Lines<br>
-		<input type="radio" name="category" value="cheesy" <?php if ($category=="cheesy") echo 'checked="checked"'?> />Cheesy Pickup Lines
-		<input type="submit" value="submit">
+		<input type="radio" name="category" value="cheesy" <?php if ($category=="cheesy") echo 'checked="checked"'?> />Cheesy Pickup Lines <br>
+		<input type="radio" name="category" value="Ridiculous" <?php if ($category=="Ridiculous") echo 'checked="checked"'?> />Ridiculous Pickup Lines <br>
+		<input type="submit" value="New Line">
+		<input type="checkbox" name="likebox" value="ilike"> I like this! <br>
+
 	</form>
 
-	<form>
-		<input type="submit" value="I Like this!">
+	<form action="saved.php"> 
+		<input type="submit" value="View Saved Lines">
 	</form>
+
+
+	
+
 
 	</section>
 </body>
