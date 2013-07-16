@@ -114,8 +114,9 @@ button.active .arrow{
 .pickUpLine {
 	position: fixed;
 	text-align: center;
-	left: 14%;
+	left: 50%;
 	top: 35%;
+	margin-left: -500px;
 	height: 30px;
 	width: 1000px;
 	border: none;
@@ -131,8 +132,9 @@ button.active .arrow{
 
 #heartContainer {
 	position: fixed;
-	top: 42%;
-	left:47%;
+	top: 45%;
+	left:50%;
+	margin-left: -52px;
 	background: #FFF;
 	width: 105px;
 	-webkit-transition: all 0.5s ease;
