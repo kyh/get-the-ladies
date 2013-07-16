@@ -58,7 +58,7 @@ a:hover {
 
 .saveContainer {
 	position: fixed;
-	top: 10px;
+	top: 0px;
 	right: 10px;
 }
 
@@ -76,27 +76,35 @@ a:hover {
 }
 
 .arrow {
-	font-size: 2em;
-	color: #FFF;
+	font-size: 2.5em;
+	color: #0d77b6;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+.arrow:hover {
+	color: #47a3da;
 }
 
 button {
 	border: none;
 	display: block;
 	cursor: pointer;
-	background: #0d77b6;
+	background: #FFF;
 	width: 50px;
 	height: 77px;
-	-webkit-transition: all 0.5s ease;
-	-moz-transition: all 0.5s ease;
-	transition: all 0.5s ease;
-}
-
-button:hover {
-	background: #47a3da;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 
 button.active {
+	background: #0d77b6;
+}
+
+button.active .arrow{
+	color: #FFF;
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);

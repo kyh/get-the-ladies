@@ -19,10 +19,10 @@
 		</nav>
 		<div class="buttonContainer">
 			<!-- Class "menu-open" gets applied to menu -->
-			<button id="showMenu"><div class="arrow" aria-hidden="true" data-icon="&#xe104;"></button>
+			<button id="showMenu"><div class="arrow" aria-hidden="true" data-icon="&#xe104;"></div></button>
 		</div>
 		<div class="saveContainer">
-			<div class="save" aria-hidden="true" data-icon="&#xe06a;"></div>
+			<button id="saveJoke"><div class="save" aria-hidden="true" data-icon="&#xe06a;"></div></button>
 		</div>
 		<div class="container">
 			<input type="text" readonly="readonly" class="pickUpLine" value="Would you grab my arm so I can tell my friends I’ve been touched by an angel"></input>
