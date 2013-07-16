@@ -21,8 +21,14 @@
 			<!-- Class "menu-open" gets applied to menu -->
 			<button id="showMenu"><div class="arrow" aria-hidden="true" data-icon="&#xe104;"></div></button>
 		</div>
+		<nav class="saveMenu" id="saveMenu">
+			<ul>
+				<li>Save</li>
+				<li>Show</li>
+			</ul>
+		</nav>
 		<div class="saveContainer">
-			<button id="saveJoke"><div class="save" aria-hidden="true" data-icon="&#xe06a;"></div></button>
+			<button id="showSaveMenu"><div class="save" aria-hidden="true" data-icon="&#xe06a;"></div></button>
 		</div>
 		<div class="container">
 			<input type="text" readonly="readonly" class="pickUpLine" value="Would you grab my arm so I can tell my friends I’ve been touched by an angel"></input>
@@ -34,12 +40,19 @@
 		<script src="js/classie.js"></script>
 		<script>
 			var menu = document.getElementById( 'menu' ),
+				savedMenu = document.getElementById( 'saveMenu' ),
 				showMenu = document.getElementById( 'showMenu' ),
+				showSaved = document.getElementById( 'showSaveMenu' ),
 				body = document.body;
 
 			showMenu.onclick = function() {
 				classie.toggle( this, 'active' );
 				classie.toggle( menu, 'menu-open' );
+			};
+
+			showSaved.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( savedMenu, 'saveMenu-open' );
 			};
 
 		</script>

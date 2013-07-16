@@ -75,6 +75,10 @@ a:hover {
 	cursor: pointer;
 }
 
+.saveMenu ul {
+	margin: 15px 0px 0px 0px;
+}
+
 .arrow {
 	font-size: 2.5em;
 	color: #0d77b6;
@@ -108,6 +112,10 @@ button.active .arrow{
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
+}
+
+button.active .save{
+	color: #FFF; 
 }
 
 /*Main content */
@@ -228,7 +236,17 @@ button.active .arrow{
 	color: #47a3da;
 }
 
-/* Slides from the left to right */
+.saveMenu{
+	background: #0d77b6;
+	position: fixed;
+	width: 100px;
+	height: 77px;
+	top: 0;
+	right: 50px;
+	z-index: 100;
+}
+
+/* Slides from the left to right or top to bottom */
 
 .menu {
 	left: -240px;
@@ -238,9 +256,17 @@ button.active .arrow{
 	left: 0px;
 }
 
+.saveMenu {
+	top: -100px;
+}
+
+.saveMenu.saveMenu-open {
+	top: 0px;
+}
+
 /* Transitions */
 
-.menu {
+.menu, .saveMenu {
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
