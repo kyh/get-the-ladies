@@ -98,7 +98,7 @@ button {
 	cursor: pointer;
 	background: #FFF;
 	width: 50px;
-	height: 77px;
+	height: 74px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
@@ -110,6 +110,9 @@ button.active {
 
 button.active .arrow{
 	color: #FFF;
+	transform-origin:50% 49%;
+	-ms-transform-origin:50% 49%; /* IE 9 */
+	-webkit-transform-origin: 55% 44%; /* Safari and Chrome */
 	transform:rotate(180deg);
 	-ms-transform:rotate(180deg);
 	-webkit-transform:rotate(180deg);
@@ -211,6 +214,7 @@ button.active .save{
 	font-size: 1.9em;
 	text-indent: 35px;
 	padding: 20px;
+	padding-top: 17px;
 	margin: 0;
 	font-weight: 300;
 	background: #0d77b6;
