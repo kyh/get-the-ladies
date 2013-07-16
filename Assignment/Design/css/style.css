@@ -98,7 +98,7 @@ button {
 	cursor: pointer;
 	background: #FFF;
 	width: 50px;
-	height: 74px;
+	height: 73px;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 	transition: all 0.3s ease;
@@ -245,7 +245,7 @@ button.active .save{
 	background: #0d77b6;
 	position: fixed;
 	width: 100px;
-	height: 77px;
+	height: 73px;
 	top: 0;
 	right: 50px;
 	z-index: 100;
