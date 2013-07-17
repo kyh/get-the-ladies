@@ -52,12 +52,12 @@
 				<nav class="menu" id="menu">
 				<h3>Categories</h3>
 					<input type="radio" name="category" value="all" id="allCat"><label for="allCat">All</label>
-					<input type="radio" name="category" value="cheesy" id="cheesyCat"><label for="cheesyCat">Cheesy</label>
-					<input type="radio" name="category" value="Disney" id="disCat"><label for="disCat">Disney</label>
-					<input type="radio" name="category" value="Gross" id="grossCat"><label for="grossCat">Gross</label>
-					<input type="radio" name="category" value="nerdy" id="nerdCat"><label for="nerdCat">Nerdy</label>
-					<input type="radio" name="category" value="Rude" id="rudeCat"><label for="rudeCat">Rude</label>
-					<input type="radio" name="category" value="Valentines" id="valCat"><label for="valCat">Valentines</label>
+					<input type="radio" name="category" value="cheesy" id="cheesyCat" <?php if ($category=="cheesy") echo 'checked="checked"'?>><label for="cheesyCat">Cheesy</label>
+					<input type="radio" name="category" value="Disney" id="disCat" <?php if ($category=="Disney") echo 'checked="checked"'?>><label for="disCat">Disney</label>
+					<input type="radio" name="category" value="Gross" id="grossCat" <?php if ($category=="Gross") echo 'checked="checked"'?>><label for="grossCat">Gross</label>
+					<input type="radio" name="category" value="nerdy" id="nerdCat" <?php if ($category=="nerdy") echo 'checked="checked"'?>><label for="nerdCat">Nerdy</label>
+					<input type="radio" name="category" value="Rude" id="rudeCat" <?php if ($category=="Rude") echo 'checked="checked"'?>><label for="rudeCat">Rude</label>
+					<input type="radio" name="category" value="Valentines" id="valCat" <?php if ($category=="Valentines") echo 'checked="checked"'?>><label for="valCat">Valentines</label>
 				</nav>
 				<?php
 					if($flag) {
