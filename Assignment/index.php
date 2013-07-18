@@ -95,30 +95,24 @@
 				<li><a href="pickUpLines.xml" class="sb" id="rss" target="_blank">Rss</a>
 			</ul>
 		</section>
-		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script type="text/javascript">
 
-	
 		function saveline() {
-
 			if(typeof session==='undefined') {
 				var saved=[];
 				saved.push(JSON.parse(localStorage.getItem('session')));
 				localStorage.setItem('session', JSON.stringify(saved));	
-
-			}
+				}
 
 			var pline = document.getElementById('pickUpLine').innerHTML;
 			saved=JSON.parse(localStorage.getItem('session'));
 			
 			if(saved[0]===null) {
 				saved[0]=pline;
-			}
-			else {
+				} else {
 				saved.push(pline);
-			}
+				}
 			localStorage.setItem('session', JSON.stringify(saved));
-
 		}
 
 		function printlines() {
@@ -127,19 +121,15 @@
 
 			if (saved[0]===null) {
 				document.getElementById('pickUpLine').innerHTML="No Saved Lines!";
-
 			}
 			else {
-			for(var i=0;i<saved.length;i++) {
-
-				// document.write(saved[i] + "<br> !!");
-				x=x+saved[i] + '</br>'
+				for(var i=0;i<saved.length;i++) {
+					// document.write(saved[i] + "<br> !!");
+					x=x+saved[i] + '</br>'
+					}
+				document.getElementById('pickUpLine').innerHTML=x;
+				document.getElementById('heartContainer').style.top="5%";
 			}
-			document.getElementById('pickUpLine').innerHTML=x;
-		}
-
-
-
 		}
 
 		function clearlocal() {
@@ -151,9 +141,8 @@
 			location.reload();
 		}
 
-
 		</script>
-		<script src="js/classie.js"></script>
+		<script src="js/classie.js"></script>		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script>
 			var menu = document.getElementById( 'menu' ),
 				savedMenu = document.getElementById( 'saveMenu' ),

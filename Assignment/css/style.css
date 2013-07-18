@@ -61,6 +61,7 @@ a:hover {
 	position: fixed;
 	top: 0px;
 	right: 0px;
+	z-index: 200;
 }
 
 .save {
@@ -77,8 +78,20 @@ a:hover {
 }
 
 .saveMenu ul {
-	margin: 15px 0px 0px 0px;
+	margin: 0;
+	padding: 0;
+}
+
+.saveMenu ul li button{
+	background: #0d77b6;
 	color: #FFF;
+	height: 40px;
+	padding: 10px;
+	width: 100px;
+}
+
+.saveMenu ul li button:hover{
+	background: #47a3da;
 }
 
 .arrow {
@@ -199,10 +212,10 @@ button.active .save{
 .saveMenu{
 	background: #0d77b6;
 	position: fixed;
-	width: 100px;
-	height: 73px;
+	width: 150px;
+	height: 120px;
 	top: 0;
-	right: 50px;
+	right: 0px;
 	z-index: 100;
 }
 
@@ -217,7 +230,7 @@ button.active .save{
 }
 
 .saveMenu {
-	top: -100px;
+	top: -120px;
 }
 
 .saveMenu.saveMenu-open {
@@ -278,7 +291,7 @@ a.sb:hover {
 /* Responsive */
 
 @media screen and (max-width: 1000px) {
-	.pickUpLine {
+	#pickUpLine {
 		left: 50%;
 		top: 35%;
 		margin-left: -300px;
@@ -294,7 +307,7 @@ a.sb:hover {
 }
 
 @media screen and (max-width: 600px) {
-	.pickUpLine {
+	#pickUpLine {
 		left: 50%;
 		top: 35%;
 		margin-left: -150px;
@@ -313,7 +326,7 @@ a.sb:hover {
 }
 
 @media screen and (max-width: 300px) {
-	.pickUpLine {
+	#pickUpLine {
 		left: 50%;
 		top: 25%;
 		margin-left: -50px;
