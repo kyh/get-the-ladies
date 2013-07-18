@@ -224,6 +224,49 @@ button.active .save{
 	top: 0px;
 }
 
+/* Social Navigation */
+.socialIco {
+	position: fixed;
+	list-style: none;
+	bottom: 10px;
+	right: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+.socialIco li{
+	display: inline;
+}
+
+a.sb {
+	width: 32px;
+	height: 32px;
+	text-indent: -900em;
+	display: inline-block;
+	margin: 0 2px 5px 0;
+	-webkit-border-radius: 10em;
+	-moz-border-radius: 10em;
+	border-radius: 10em;
+	background-color: #0d77b6;
+	-webkit-transition: all 0.5s ease;
+	-moz-transition: all 0.5s ease;
+	transition: all 0.5s ease;
+}
+
+a.sb:hover {
+	background-color: #47a3da;
+}
+#twitter {
+	background-image: url(social/twitter.png);
+}
+
+#facebook {
+	background-image: url(social/facebook.png);
+}
+
+#rss {
+	background-image: url(social/rss.png);
+}
 /* Transitions */
 
 .menu, .saveMenu {
@@ -236,9 +279,6 @@ button.active .save{
 
 @media screen and (max-width: 1000px) {
 	.pickUpLine {
-		font-family: 'Patua One', cursive;
-		position: fixed;
-		text-align: center;
 		left: 50%;
 		top: 35%;
 		margin-left: -300px;
@@ -246,23 +286,15 @@ button.active .save{
 		font-size: 18px;
 	}
 	#heartContainer {
-		position: fixed;
 		top: 50%;
 		left:50%;
 		margin-left: -52px;
-		background: url('heart.svg') no-repeat top left;
 		width: 100px;
-		-webkit-transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease;
-		transition: all 0.5s ease;
 	}
 }
 
 @media screen and (max-width: 600px) {
 	.pickUpLine {
-		font-family: 'Patua One', cursive;
-		position: fixed;
-		text-align: center;
 		left: 50%;
 		top: 35%;
 		margin-left: -150px;
@@ -270,23 +302,18 @@ button.active .save{
 		font-size: 18px;
 	}
 	#heartContainer {
-		position: fixed;
 		top: 60%;
 		left:50%;
 		margin-left: -52px;
-		background: url('heart.svg') no-repeat top left;
 		width: 100px;
-		-webkit-transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease;
-		transition: all 0.5s ease;
+	}
+	.menu label {
+		padding: 0.7em;
 	}
 }
 
 @media screen and (max-width: 300px) {
 	.pickUpLine {
-		font-family: 'Patua One', cursive;
-		position: fixed;
-		text-align: center;
 		left: 50%;
 		top: 25%;
 		margin-left: -50px;
@@ -294,14 +321,15 @@ button.active .save{
 		font-size: 16px;
 	}
 	#heartContainer {
-		position: fixed;
 		top: 70%;
 		left:50%;
 		margin-left: -52px;
-		background: url('heart.svg') no-repeat top 10px left 10px;
 		background-size: 80px 60px;
-		-webkit-transition: all 0.5s ease;
-		-moz-transition: all 0.5s ease;
-		transition: all 0.5s ease;
+	}
+	.menu label {
+		padding: 0.5em;
+	}
+	.socialIco {
+		display: none;
 	}
 }

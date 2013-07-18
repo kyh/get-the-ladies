@@ -81,6 +81,13 @@
 				<button id="heartContainer"></button>
 			</form>
 		</section>
+		<section id="social">
+			<ul class="socialIco">
+				<li><a href="https://twitter.com/intent/tweet?button_hashtag=gettheladies" class="sb" id="twitter">Twitter</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				<li><a href="pickUpLines.xml" class="sb" id="rss" target="_blank">Rss</a>
+			</ul>
+		</section>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
 		<script src="js/classie.js"></script>
 		<script>
