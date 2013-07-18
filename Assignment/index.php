@@ -72,15 +72,13 @@
 								}
 							}
 						$rand1 = rand(0, count($categorized)-1);
-						echo ('<input type="text" readonly="readonly" name="pickupline" size="150" class="pickUpLine" value="' . $categorized[$rand1] . '">');
+						echo ('<div class="pickUpLine"><span id="theJoke">' . $categorized[$rand1] . '</span></div>');
 							}else {	
 						//Displays ALL pickup lines. 
-						echo('<input type="text" readonly="readonly" name="pickupline" size="150" class="pickUpLine" value="' . $pickUp->joke[$rand]->title . '">');
+						echo('<div class="pickUpLine"><span id="theJoke">' . $pickUp->joke[$rand]->title . '</span></div>');
 					}
 				?>
-				<button id="heartContainer">
-					<div id="heart"></div>
-				</button>
+				<button id="heartContainer"></button>
 			</form>
 		</section>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
