@@ -124,7 +124,7 @@ button.active .save{
 }
 
 /*Main content */
-.pickUpLine {
+#pickUpLine {
 	font-family: 'Patua One', cursive;
 	position: fixed;
 	text-align: center;

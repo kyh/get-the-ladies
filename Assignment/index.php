@@ -40,8 +40,15 @@
 		</div>
 		<nav class="saveMenu" id="saveMenu">
 			<ul>
-				<li>Save</li>
-				<li>Show</li>
+				<li>
+					<button onclick="saveline()"> Save Line </button>
+				</li>
+				<li>
+					<button onclick="printlines()"> Print Lines </button>
+				</li>
+				<li>
+					<button onclick="clearlocal()"> Clear Lines </button>
+				</li>
 			</ul>
 		</nav>
 		<div class="saveContainer">
@@ -72,10 +79,10 @@
 								}
 							}
 						$rand1 = rand(0, count($categorized)-1);
-						echo ('<div class="pickUpLine"><span id="theJoke">' . $categorized[$rand1] . '</span></div>');
+						echo ('<div id="pickUpLine"><span id="theJoke">' . $categorized[$rand1] . '</span></div>');
 							}else {	
 						//Displays ALL pickup lines. 
-						echo('<div class="pickUpLine"><span id="theJoke">' . $pickUp->joke[$rand]->title . '</span></div>');
+						echo('<div id="pickUpLine"><span id="theJoke">' . $pickUp->joke[$rand]->title . '</span></div>');
 					}
 				?>
 				<button id="heartContainer"></button>
@@ -89,6 +96,63 @@
 			</ul>
 		</section>
 		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script type="text/javascript">
+
+	
+		function saveline() {
+
+			if(typeof session==='undefined') {
+				var saved=[];
+				saved.push(JSON.parse(localStorage.getItem('session')));
+				localStorage.setItem('session', JSON.stringify(saved));	
+
+			}
+
+			var pline = document.getElementById('pickUpLine').innerHTML;
+			saved=JSON.parse(localStorage.getItem('session'));
+			
+			if(saved[0]===null) {
+				saved[0]=pline;
+			}
+			else {
+				saved.push(pline);
+			}
+			localStorage.setItem('session', JSON.stringify(saved));
+
+		}
+
+		function printlines() {
+			var saved=JSON.parse(localStorage.getItem('session'));
+			var x="";
+
+			if (saved[0]===null) {
+				document.getElementById('pickUpLine').innerHTML="No Saved Lines!";
+
+			}
+			else {
+			for(var i=0;i<saved.length;i++) {
+
+				// document.write(saved[i] + "<br> !!");
+				x=x+saved[i] + '</br>'
+			}
+			document.getElementById('pickUpLine').innerHTML=x;
+		}
+
+
+
+		}
+
+		function clearlocal() {
+			document.getElementById("pickUpLine").innerHTML="";
+			localStorage.clear();
+			var saved = [];
+			saved.push(JSON.parse(localStorage.getItem('session')));
+			localStorage.setItem('session', JSON.stringify(saved));
+			location.reload();
+		}
+
+
+		</script>
 		<script src="js/classie.js"></script>
 		<script>
 			var menu = document.getElementById( 'menu' ),
